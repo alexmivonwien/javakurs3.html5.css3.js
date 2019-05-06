@@ -1,0 +1,10 @@
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+table.productTable {
+	margin-left:auto; 
+    margin-right:auto;
+}
