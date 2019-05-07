@@ -8,3 +8,8 @@ table.productTable {
 	margin-left:auto; 
     margin-right:auto;
 }
+
+.tableImage {
+	height:250px;
+	width:250px;
+}

@@ -6,17 +6,20 @@
 	</head>
 	<body>
 		<h2>Welcome to our online beauty shop!</h2>
-		 <table class="productTable">
-		 	 <tbody>
-			    <tr>
-			      <td ><img src="images/A0F21S00I-K11@7.jpg" border=3 height=100 width=100></img></td>
-			      <td>$100</td>
-			    </tr>
-			    <tr>
-			      <td>February</td>
-			      <td>$80</td>
-			    </tr>
-			 </tbody>		 
-		</table> 
+		<div id = "leftDiv" style="float:left; width:22%;">
+          	<img id="libraryImageId" src='../images/library_small.jpg' alt='library'  style="width: 280px; height: 160 px;"/>
+        </div>
+		<div id = "rightDiv" style="float:right; width:78%;">
+			 <table class="productTable">
+			 	 <tbody>
+				    <tr>
+				      <td><img src="images/A0F21S00I-K11@7.jpg"  alt= "product K11@7" class="tableImage" onmouseover="bigImg(this)"></img></td>
+				      <td><img src="images/AGA21S008-K11@5.jpg"  alt= "product K11@5" class="tableImage" onmouseover="bigImg(this)"></img></td>
+				      <td><img src="images/ARC21S002-C11@10.jpg" alt= "product C11@10" class="tableImage" onmouseover="bigImg(this)"></img></td>
+				      <td><img src="images/IR221S001-K11@2.jpg"  alt= "product K11@2" class="tableImage" onmouseover="bigImg(this)"></img></td>
+				    </tr>
+				 </tbody>		 
+			</table> 
+	   	</div>
 	</body>
 </html>
