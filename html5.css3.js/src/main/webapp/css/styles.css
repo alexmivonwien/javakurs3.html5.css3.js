@@ -9,6 +9,15 @@ table.productTable {
     margin-right:auto;
 }
 
+.priceAb {
+	font-size: 16px;
+	font-family: Arial, Helvetica;
+}
+
+.price {
+	@extend .priceAb; /** https://css-tricks.com/the-extend-concept/ +**/
+	font-weight: bold;
+}
 .tableImage {
 	height:250px;
 	width:250px;
