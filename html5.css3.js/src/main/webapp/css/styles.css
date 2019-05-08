@@ -1,33 +1,42 @@
 header {
   background-color: #F1F1F1;
-  padding: 20px;
+  padding: 25px;					/** used to generate space around an element's content **/
 }
 
 h1{font-size:36px; text-align: center;}
 h2{font-size:30px; text-align: center;}
-h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:"Segoe UI",Arial,sans-serif;
+	font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
+}
 
 .topnav {
-  overflow: hidden;
-  border-style: outset;
+ 	/** border-style: outset;  - make a border around the div **/
+ 	
+ 	/** center a div, how it works source:
+ 		https://stackoverflow.com/a/31639985/1925356 **/
+ 		
+  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
+  
+  transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
+  											since height /width are given in negatives, thus aligning the div to the center of the page. **/
+  position: absolute;
 }
 
 /* Style the topnav links */
 .topnav a {
-  float: left;
   font-family:"Segoe UI",Arial,sans-serif;
-  display: block;
   color: #000;
   text-align: center;
-  padding: 14px;
-  text-decoration: none;
+  padding: 14px;			/** used to generate space around an element's content **/
+  text-decoration: none;	/** removes the underline in the link's content **/
 }
 
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color:inherit;
+  background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
 table.productTable {
 	margin-left:auto; 
