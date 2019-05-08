@@ -29,9 +29,9 @@
 				    </tr>
 				     <tr>
 					  <td>Preferred Contact Type:</td>
-					  <td><input id="contactEMailRadioId" type ="radio" name="contactPref" onclick="setPrefContact(this);" value="email"/>
+					  <td><input id="contactEMailRadioId" type ="radio" name="contactPref" onclick="setPrefContact();" value="email"/>
 					  		E-Mail
-					  	  <input id="contactTelRadioId" type ="radio" name="contactPref" onclick="setPrefContact(this);" value="tel"/>
+					  	  <input id="contactTelRadioId" type ="radio" name="contactPref" onclick="setPrefContact();" value="tel"/>
 					  	    Tel.
 					  </td>				    
 				    </tr>
@@ -41,7 +41,14 @@
 				    </tr>
 				    <tr id="phoneInputId">
 					  <td>Your phone</td>
-					  <td><input type ="tel" name="tel"/></td>				    
+					  <!--  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel
+					  		Unlike <input type="email"> and <input type="url"> , the input value is not automatically validated to a particular format before the form can be submitted, 
+					  		because formats for telephone numbers vary so much around the world.
+					   -->
+					  <td><input type ="tel" 
+					  			  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"					  
+					  			  name="tel"/>
+					  </td>				    
 				    </tr>
 				    <tr>
 				      <td></td>

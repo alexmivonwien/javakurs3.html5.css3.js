@@ -1,9 +1,8 @@
-
 /**
  * sets the default values on the contact.html page
  * 
  */
-function setContactDefaults(){
+function setContactDefaults() {
 	document.getElementById("contactEMailRadioId").checked = true;
 	document.getElementById("phoneInputId").style.display = "none";
 }
@@ -11,22 +10,20 @@ function setContactDefaults(){
 /**
  * hides the contact option that is not selected on the contact.html page
  * 
- * @param elem
- * @returns
+ * @see https://www.w3schools.com/cssref/pr_class_display.asp
+ * 
  */
-function setPrefContact(elem){
-	if (this.elem == null){
-		return;
-	}
-	
-	if (this.elem.value == "email"){
+function setPrefContact() {
+
+	if (document.getElementById("contactEMailRadioId").checked) {
 		document.getElementById("phoneInputId").style.display = "none";
+		document.getElementById("eMailInputId").style.display = "table-row"; // Let the element behave like a <tr> element
 		return;
 	}
 
-	if (this.elem.value == "tel"){
+	if (document.getElementById("contactTelRadioId").checked) {
 		document.getElementById("eMailInputId").style.display = "none";
+		document.getElementById("phoneInputId").style.display = "table-row"; // Let the element behave like a <tr> element
 		return;
 	}
-
 }
