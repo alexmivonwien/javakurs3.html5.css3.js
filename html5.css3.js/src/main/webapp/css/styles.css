@@ -52,12 +52,16 @@ table.contactTable {
 
 
 
-table.contactTable td 
+.tdrigth 
 {
   table-layout:fixed;
   width:120px;
-  overflow:hidden;
-  word-wrap:break-word;
+}
+
+textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
+    width:100%;
+    max-width:98%;
+    max-height:30%;
 }
 
 
