@@ -43,6 +43,25 @@ table.productTable {
     margin-right:auto;
 }
 
+
+table.contactTable {
+ 	font-family:"Segoe UI",Arial,sans-serif;
+ 	margin-top:10px;
+ 	margin-left:340px;
+}
+
+
+
+table.contactTable td 
+{
+  table-layout:fixed;
+  width:120px;
+  overflow:hidden;
+  word-wrap:break-word;
+}
+
+
+
 .priceAb {
 	font-size: 16px;
 	font-family: Arial, Helvetica;
