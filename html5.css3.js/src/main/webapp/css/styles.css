@@ -38,18 +38,17 @@ h1,h2,h3,h4,h5,h6{
 .topnav a:hover {
   background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
-table.productTable {
-	margin-left:auto; 
-    margin-right:auto;
-}
 
+.tableImage {
+	height:250px;
+	width:250px;
+}
 
 table.contactTable {
  	font-family:"Segoe UI",Arial,sans-serif;
  	margin-top:10px;
- 	margin-left:340px;
+ 	margin-left:190px;
 }
-
 
 
 .tdrigth 
@@ -74,9 +73,4 @@ textarea {				/** limiting the textarea size, @see https://stackoverflow.com/que
 .price {
 	@extend .priceAb; /** https://css-tricks.com/the-extend-concept/ +**/
 	font-weight: bold;
-}
-
-.tableImage {
-	height:250px;
-	width:250px;
 }
