@@ -49,15 +49,19 @@ h1,h2,h3,h4,h5,h6{
   background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
 
-.tableImage {
-	height:200px;
-	width:200px;
+.divImage{
 	padding: 5px;
 	background-color: white;
 }
-.tableImage:hover {
+
+.divImage:hover {
 	@extend .tableImage; /** https://css-tricks.com/the-extend-concept/ +**/
 	background-color:#ddd;
+}
+
+.tableImage {
+	height:200px;
+	width:200px;
 }
 
 .chosenProductDetailsImage{

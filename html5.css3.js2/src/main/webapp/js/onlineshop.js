@@ -37,6 +37,7 @@ function showDetailImage(elem){
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
 	if (productDetailsImage!=null){
 		productDetailsImage.src = elem.src;
+		document.getElementById("NA823E08M-H11@6").style.display = "block";
 	}
 	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
 	if (beachWearDetailsImage!=null){
@@ -52,6 +53,10 @@ function hideDetailImage(){
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
 	if (productDetailsImage!=null){
 		productDetailsImage.src = "";
+		var elem = document.getElementById("NA823E08M-H11@6");
+		if (!elem.checked){
+			elem.style.display = "none";
+		}
 	}
 	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
 	if (beachWearDetailsImage!=null){
