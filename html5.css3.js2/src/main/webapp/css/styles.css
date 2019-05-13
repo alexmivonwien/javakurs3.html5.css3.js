@@ -14,15 +14,19 @@ h1,h2,h3,h4,h5,h6{
 /* ---------------------- Styles for the screen vertical separation ---------------------------------------------------------------------- */
 
 #leftDiv {
-	float:left; 
-	width:31%;
+    float:left; 
+	width:25%;
 }
 
-#rightDiv {
-	float:right; 
-	width:69%;
+#productsDiv {
+	display:inline;
+	width:60%;
 }
 
+#cartDiv {
+    float:right; 
+	width:15%;
+}
 
 /* ---------------------- Styles for the navigation ---------------------------------------------------------------------------------------- */
 
