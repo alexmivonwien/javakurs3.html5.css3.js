@@ -21,14 +21,9 @@ h1,h2,h3,h4,h5,h6{
 	width:69%;
 }
 
-.topnav {
- 	/** border-style: outset;  - make a border around the div **/
- 	
- 	/** center a div, how it works source:
- 		https://stackoverflow.com/a/31639985/1925356 **/
+.topnav { /** center a div, how it works @see  https://stackoverflow.com/a/31639985/1925356 **/
  		
-  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
-  
+  left: 50%;	/** the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
   transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
   											since height /width are given in negatives, thus aligning the div to the center of the page. **/
   position: absolute;
@@ -65,7 +60,6 @@ h1,h2,h3,h4,h5,h6{
 
 
 .divImage:hover {
-	@extend .tableImage; /** https://css-tricks.com/the-extend-concept/ +**/
 	background-color:#ddd;
 }
 
@@ -101,13 +95,11 @@ textarea {				/** limiting the textarea size, @see https://stackoverflow.com/que
 }
 
 
-
 .priceAb {
 	font-size: 16px;
 	font-family: Arial, Helvetica;
 }
 
 .price {
-	@extend .priceAb; /** https://css-tricks.com/the-extend-concept/ +**/
 	font-weight: bold;
 }
