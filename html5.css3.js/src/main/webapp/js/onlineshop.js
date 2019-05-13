@@ -27,3 +27,36 @@ function setPrefContact() {
 		return;
 	}
 }
+
+/**
+ * shows the detail image of the product (called when mouse is over the product chosen)
+ * 
+ */
+
+function showDetailImage(elem){
+	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
+	if (productDetailsImage!=null){
+		productDetailsImage.src = elem.src;
+	}
+	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
+	if (beachWearDetailsImage!=null){
+		beachWearDetailsImage.src = elem.src;
+	}
+}
+
+/**
+ * hides the detail image of the product (called when mouse is out of the product chosen)
+ * 
+ */
+function hideDetailImage(){
+	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
+	if (productDetailsImage!=null){
+		productDetailsImage.src = "";
+	}
+	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
+	if (beachWearDetailsImage!=null){
+		beachWearDetailsImage.src = "";
+	}
+
+	
+}
