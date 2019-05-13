@@ -45,8 +45,9 @@ function showDetailImage(elem) {
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
 	if (productDetailsImage != null) {
 		productDetailsImage.src = elem.firstElementChild.src; // the image element
-		elem.firstElementChild.nextElementSibling.style.display = "block"; // the next sibling of the image element - this is the checkbox
-		elem.getElementsByTagName("span")[0].style.display = "block"; // the tag <span> together with the text "Add to cart"
+		var checkBoxAddToCart = elem.firstElementChild.nextElementSibling; // the next sibling of the image element - this is the checkbox
+		checkBoxAddToCart.style.display = "block";
+		var spanElement = elem.getElementsByTagName("span")[0].style.display = "block"; // the tag <span> together with the text "Add to cart"
 	}
 }
 
@@ -69,9 +70,21 @@ function hideDetailImage(elem) {
 		var checkBoxAddToCart = elem.firstElementChild.nextElementSibling; // the next sibling of the image element - this is the check-box
 		if (!checkBoxAddToCart.checked) {
 			checkBoxAddToCart.style.display = "none";
-			elem.getElementsByTagName("span")[0].style.display = "none"; // the tag <span> together with the text "Add to cart"
-		} else {
-			elem.getElementsByTagName("span")[0].innerHTML = "Added to cart!" // we change the text to "Added to cart"
 		}
 	}
+}
+
+/**
+ * @param elem
+ * @returns
+ */
+function setAddedToCart(elem) {
+	if (elem.checked) {
+		elem.nextElementSibling.innerHTML = "Added to cart!"; // the first sibling of the checkbox is the <span> element
+		elem.nextElementSibling.classList.add("addedToCart"); // add a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+	} else {
+		elem.nextElementSibling.innerHTML = "Add to cart"; // the first sibling of the checkbox is the <span> element
+		elem.nextElementSibling.classList.remove("addedToCart"); // remove a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+	}
+
 }

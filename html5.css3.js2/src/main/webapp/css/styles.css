@@ -54,6 +54,10 @@ h1,h2,h3,h4,h5,h6{
 	background-color: white;
 }
 
+.addedToCart{
+	color:#a600a6;
+}
+
 .divImage span{
 	font-family:"Segoe UI",Arial,sans-serif;
 	display:none;
