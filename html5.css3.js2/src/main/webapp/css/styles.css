@@ -54,6 +54,12 @@ h1,h2,h3,h4,h5,h6{
 	background-color: white;
 }
 
+.divImage span{
+	font-family:"Segoe UI",Arial,sans-serif;
+	display:none;
+}
+
+
 .divImage:hover {
 	@extend .tableImage; /** https://css-tricks.com/the-extend-concept/ +**/
 	background-color:#ddd;

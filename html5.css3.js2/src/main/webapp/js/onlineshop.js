@@ -29,39 +29,49 @@ function setPrefContact() {
 }
 
 /**
- * shows the detail image of the product (called when mouse is over the product chosen)
+ * shows the detail image of the product (called when mouse is over the product chosen); accesses some HTML elements as DOM elements
+ * 
+ * @see https://www.w3schools.com/jsref/prop_element_nextelementsibling.asp
+ * @see https://www.w3schools.com/jsref/prop_element_firstelementchild.asp
+ * 
+ * @param elem
+ *            the first <div> within the products table'
+ *            <td> element
+ * @returns void
  * 
  */
 
-function showDetailImage(elem){
+function showDetailImage(elem) {
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
-	if (productDetailsImage!=null){
-		productDetailsImage.src = elem.src;
-		document.getElementById("NA823E08M-H11@6").style.display = "block";
-	}
-	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
-	if (beachWearDetailsImage!=null){
-		beachWearDetailsImage.src = elem.src;
+	if (productDetailsImage != null) {
+		productDetailsImage.src = elem.firstElementChild.src; // the image element
+		elem.firstElementChild.nextElementSibling.style.display = "block"; // the next sibling of the image element - this is the checkbox
+		elem.getElementsByTagName("span")[0].style.display = "block"; // the tag <span> together with the text "Add to cart"
 	}
 }
 
 /**
  * hides the detail image of the product (called when mouse is out of the product chosen)
  * 
+ * @see https://www.w3schools.com/jsref/prop_element_nextelementsibling.asp
+ * @see https://www.w3schools.com/jsref/prop_element_firstelementchild.asp
+ * 
+ * @param elem
+ *            the first <div> within the products table'
+ *            <td> element
+ * @returns void
+ * 
  */
-function hideDetailImage(){
+function hideDetailImage(elem) {
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
-	if (productDetailsImage!=null){
+	if (productDetailsImage != null) {
 		productDetailsImage.src = "";
-		var elem = document.getElementById("NA823E08M-H11@6");
-		if (!elem.checked){
-			elem.style.display = "none";
+		var checkBoxAddToCart = elem.firstElementChild.nextElementSibling; // the next sibling of the image element - this is the check-box
+		if (!checkBoxAddToCart.checked) {
+			checkBoxAddToCart.style.display = "none";
+			elem.getElementsByTagName("span")[0].style.display = "none"; // the tag <span> together with the text "Add to cart"
+		} else {
+			elem.getElementsByTagName("span")[0].innerHTML = "Added to cart!" // we change the text to "Added to cart"
 		}
 	}
-	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
-	if (beachWearDetailsImage!=null){
-		beachWearDetailsImage.src = "";
-	}
-
-	
 }
