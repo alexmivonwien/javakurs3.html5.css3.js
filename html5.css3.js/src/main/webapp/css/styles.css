@@ -56,7 +56,6 @@ h1,h2,h3,h4,h5,h6{
 	background-color: white;
 }
 .tableImage:hover {
-	@extend .tableImage; /** https://css-tricks.com/the-extend-concept/ +**/
 	background-color:#ddd;
 }
 
@@ -94,6 +93,5 @@ textarea {				/** limiting the textarea size, @see https://stackoverflow.com/que
 }
 
 .price {
-	@extend .priceAb; /** https://css-tricks.com/the-extend-concept/ +**/
 	font-weight: bold;
 }
