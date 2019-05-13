@@ -121,14 +121,11 @@ function addOrRemoveCartItem(elementToAdd) {
 
 	} else {
 		var rowToRemove = document.getElementById("cartTableId_" + elementToAdd.id);
-		var rowToRemoveIndex = parseInt(rowToRemove.firstElementChild.id, 10);
+		var rowToRemoveIndex = parseInt(rowToRemove.firstElementChild.innerHTML, 10);
 		cartTable.deleteRow(rowToRemoveIndex - 1);
-		if (rowToRemoveIndex < cartTable.rows.length) {
-			var i;
-			for (i = 0; i < cartTable.rows.length; i++) {
-				cartTable[0].firstElementChild.innerHTML = (i + 1);
-			}
+		var i;
+		for (i = 0; i < cartTable.rows.length; i++) {
+			cartTable.rows[i].firstElementChild.innerHTML = (i + 1);
 		}
-
 	}
 };
