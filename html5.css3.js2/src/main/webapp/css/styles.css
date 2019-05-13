@@ -11,15 +11,20 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
 }
 
-#leftDiv{
+/* ---------------------- Styles for the screen vertical separation ---------------------------------------------------------------------- */
+
+#leftDiv {
 	float:left; 
 	width:31%;
 }
 
-#rightDiv{
+#rightDiv {
 	float:right; 
 	width:69%;
 }
+
+
+/* ---------------------- Styles for the navigation ---------------------------------------------------------------------------------------- */
 
 .topnav { /** center a div, how it works @see  https://stackoverflow.com/a/31639985/1925356 **/
  		
@@ -29,7 +34,6 @@ h1,h2,h3,h4,h5,h6{
   position: absolute;
 }
 
-/* Style the topnav links */
 .topnav a {
   font-family:"Segoe UI",Arial,sans-serif;
   color: #000;
@@ -44,62 +48,66 @@ h1,h2,h3,h4,h5,h6{
   background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
 
-.divImage{
+
+/** --------- styles for the productsTable --------------------------------------------------------------------------------------------------- **/
+
+.productsTable .divImage{
 	padding: 5px;
 	background-color: white;
 }
 
-.addedToCart{
+.productsTable .addedToCart{
 	color:#a600a6;
 }
 
-.divImage span{
+.productsTable .addToCartSpan{
 	font-family:"Segoe UI",Arial,sans-serif;
 	display:none;
 }
 
 
-.divImage:hover {
+.productsTable .divImage:hover {
 	background-color:#ddd;
 }
 
-.tableImage {
+.productsTable .tableImage {
 	height:200px;
 	width:200px;
 }
 
-.chosenProductDetailsImage{
+.productsTable .chosenProductDetailsImage{
 	height:550px;
 	width:400px;
 	padding: 10px;
 	background-color: white;
 }
 
-table.contactTable {
+.productsTable .price {
+	font-family:"Segoe UI",Arial,sans-serif;
+	font-weight: bold;
+	display:block;
+}
+
+
+
+/** ---------- 	styles for the contacts table ------------------------------------------------------------------------------------------------------------------- **/
+
+.contactTable {
  	font-family:"Segoe UI",Arial,sans-serif;
  	margin-top:10px;
  	margin-left:190px;
 }
 
 
-.tdrigth 
-{
-  table-layout:fixed;
-  width:120px;
-}
-
-textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
+.contactTable textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
     width:100%;
     max-width:98%;
     max-height:30%;
 }
 
-
-.priceAb {
-	font-size: 16px;
-	font-family: Arial, Helvetica;
+.contactTable .tdrigth {
+  table-layout:fixed;
+  width:120px;
 }
 
-.price {
-	font-weight: bold;
-}
+

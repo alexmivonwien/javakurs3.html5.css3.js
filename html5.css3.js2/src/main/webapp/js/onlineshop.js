@@ -82,9 +82,47 @@ function setAddedToCart(elem) {
 	if (elem.checked) {
 		elem.nextElementSibling.innerHTML = "Added to cart!"; // the first sibling of the checkbox is the <span> element
 		elem.nextElementSibling.classList.add("addedToCart"); // add a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+		addToCartTable(elem);
 	} else {
 		elem.nextElementSibling.innerHTML = "Add to cart"; // the first sibling of the checkbox is the <span> element
 		elem.nextElementSibling.classList.remove("addedToCart"); // remove a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+	}
+}
+
+/**
+ * @returns
+ */
+function addToCartTable(elementToAdd) {
+
+	var cartTableDiv = document.getElementById("cartTableDiv");
+
+	if (cartTableDiv == null) {
+		cartTableDiv = document.createElement("div");
+		cartTableDiv.style.width = "15%";
+		cartTableDiv.style.float = "right";
+		document.getElementById("leftDiv").width = "20%";
+
+		var rightDiv = document.getElementById("rightDiv");
+		rightDiv.width = "65%";
+		rightDiv.style.float="none";
+		rightDiv.style.display = "inline";
+		document.body.appendChild(cartTableDiv);
+
+		var cartTable = document.createElement("table");
+		cartTableDiv.appendChild(cartTable);
+
+		var cartTableRow1 = document.createElement("tr");
+		cartTable.appendChild(cartTableRow1);
+
+		var cartTableTD1 = document.createElement("td");
+		cartTableRow1.appendChild(cartTableTD1);
+
+		var cartTableTD2 = document.createElement("td");
+		cartTableRow1.appendChild(cartTableTD2);
+
+		var productName = document.createTextNode(elementToAdd.value);
+		cartTableRow1.appendChild(productName);
+
 	}
 
 }
