@@ -1,0 +1,126 @@
+header {
+  background-color: #F1F1F1;
+  padding: 25px;					/** used to generate space around an element's content **/
+}
+
+h1{font-size:36px; text-align: center;}
+h2{font-size:30px; text-align: center;}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:"Segoe UI",Arial,sans-serif;
+	font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
+}
+
+/* ---------------------- Styles for the screen vertical separation ---------------------------------------------------------------------- */
+
+#leftDiv {
+    float:left; 
+	width:25%;
+}
+
+#productsDiv {
+	display:inline;
+	width:60%;
+}
+
+#cartDiv {
+    float:right; 
+	width:15%;
+}
+
+/* ---------------------- Styles for the navigation ---------------------------------------------------------------------------------------- */
+
+.topnav { /** center a div, how it works @see  https://stackoverflow.com/a/31639985/1925356 **/
+ /**		
+  left: 50%;	
+   the left property (when given in %) is calculated based on height of the outer div (in our case, window). 
+  transform: translate3d(-50%,-50%, 0);  transform uses height/width of the element to determine translation, so the  div will move left(50% width
+  											since height /width are given in negatives, thus aligning the div to the center of the page.
+  position: absolute;
+  **/
+  
+  	margin-left: auto;
+	margin-right: auto;
+}
+
+.topnav nav { /** we are aligning the text within the nav, not the nav itself!**/
+	text-align: center;
+}
+
+.topnav a {
+  font-family:"Segoe UI",Arial,sans-serif;
+  color: #000;
+  text-align: center;
+  padding: 14px;			/** used to generate space around an element's content **/
+  text-decoration: none;	/** removes the underline in the link's content **/
+}
+
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
+}
+
+
+/** --------- styles for the productsTable --------------------------------------------------------------------------------------------------- **/
+
+.productsTable .divImage{
+	padding: 5px;
+	background-color: white;
+}
+
+.productsTable .addedToCart{
+	color:#a600a6;
+}
+
+.productsTable .addToCartSpan{
+	font-family:"Segoe UI",Arial,sans-serif;
+	display:none;
+}
+
+
+.productsTable .divImage:hover {
+	background-color:#ddd;
+}
+
+.productsTable .tableImage {
+	height:200px;
+	width:200px;
+}
+
+.productsTable .chosenProductDetailsImage{
+	height:550px;
+	width:400px;
+	padding: 10px;
+	background-color: white;
+}
+
+.productsTable .price {
+	font-family:"Segoe UI",Arial,sans-serif;
+	font-weight: bold;
+	display:block;
+}
+
+
+
+/** ---------- 	styles for the contacts table ------------------------------------------------------------------------------------------------------------------- **/
+
+.contactTable {
+ 	font-family:"Segoe UI",Arial,sans-serif;
+ 	margin-top:10px;
+ 	margin-left:190px;
+}
+
+
+.contactTable textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
+    width:100%;
+    max-width:98%;
+    max-height:30%;
+}
+
+.contactTable .tdrigth {
+  table-layout:fixed;
+  width:120px;
+}
+
+

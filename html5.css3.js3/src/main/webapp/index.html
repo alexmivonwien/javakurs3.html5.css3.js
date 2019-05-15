@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/onlineshop.js"></script> 
+		<title>On-line shop</title>
+	</head>
+	<body>
+	
+	<!-- Header -->
+	<header>
+		<h1>Welcome to our online dress shop!</h1>
+	    <nav class="topnav">
+		    <nav>
+		      <a href="#">Newest</a>
+		      <a href="beachWear.html">Beach wear</a>
+		      <a href="contact.html">Contact</a>
+		      <a href="#">Weddings</a>
+		    </nav>
+	    </nav>
+	</header>
+	<div id=containerId" style="text-align:center">
+			<div id="leftDiv">
+				<img alt="" id="chosenProductDetailsImageId" class="chosenProductDetailsImage" src=""/>
+	        </div>
+			<div id="rightDiv">
+				 <table class="productsTable">
+				 	 <tbody>
+					    <tr>
+					      <td> 
+					      	<div class = "divImage" onmouseout = "hideDetailImage(this)" onmouseover="showDetailImage(this)">
+					      		<img src="images/NA823E08M-H11@6.jpg" alt= "product NA823E08M" class="tableImage" />
+					      		<input type="checkbox" id="NA823E08M-H11@6"  onclick="setAddedToCart(this)"  name="addToCart" value="Summer light skirt" style="display:none;"/> 
+					      		<span class="addToCartSpan">Add to Cart</span>
+					      		<span class="price">12,45 EUR</span>
+					      	</div>
+					      </td>
+					      <td>
+					      	<div class = "divImage" onmouseout = "hideDetailImage(this)" onmouseover="showDetailImage(this)">
+					      		<img src="images/NA823F0VN-E11@7.jpg"  alt= "product NA823F0VN" class="tableImage"/>
+					      		<input type="checkbox" id="NA823F0VN-E11@7" onclick="setAddedToCart(this)" name="addToCart" value="Light Body Skirt" style="display:none;"/> 
+					      		<span class="addToCartSpan">Add to Cart</span>
+					      		<span class="price">8,00 EUR</span>
+					      	</div>
+					      </td>
+					      <td>
+			      	      	<div class = "divImage" onmouseout = "hideDetailImage(this)" onmouseover="showDetailImage(this)">
+						      	<img src="images/NX323F11F-E11@7.jpg" alt= "product NX323F11F" class="tableImage"/>
+						      	<input type="checkbox" id="NX323F11F-E11@7" onclick="setAddedToCart(this)" name="addToCart" value="Pijamma light" style="display:none;"/> 
+					      		<span class="addToCartSpan">Add to Cart</span>
+					      		<span class="price" >16,99 EUR</span>
+						     </div>
+						   </td>
+					      <td>
+					      	<div class = "divImage" onmouseout = "hideDetailImage(this)" onmouseover="showDetailImage(this)">
+					      		<img src="images/OU523H01C-E11@7.jpg"  alt= "product OU523H01C" class="tableImage" />
+					      		<input type="checkbox" id="OU523H01C-E11@7" onclick="setAddedToCart(this)" name = "addToCart" value = "Summer T-shirt" style="display:none;"/> 
+					      		<span class="addToCartSpan">Add to Cart</span>
+					      		<span class="price">24,99 EUR</span>
+						     </div>
+					       </td>
+					    </tr>
+					 </tbody>		 
+				</table> 
+		   	</div>
+		   	<div id="cartDiv">
+		   		<table id="cartTableId">
+		   		</table>
+		   	</div>
+	   </div>
+	</body>
+</html>
