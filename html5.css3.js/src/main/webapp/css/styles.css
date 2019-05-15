@@ -21,6 +21,8 @@ h1,h2,h3,h4,h5,h6{
 	width:69%;
 }
 
+
+/* ---					Styles for the navigation div 				--- B E G I N --- */
 .topnav {
  	/** border-style: outset;  - make a border around the div **/
  	
@@ -34,7 +36,7 @@ h1,h2,h3,h4,h5,h6{
   position: absolute;
 }
 
-/* Style the topnav links */
+
 .topnav a {
   font-family:"Segoe UI",Arial,sans-serif;
   color: #000;
@@ -48,24 +50,41 @@ h1,h2,h3,h4,h5,h6{
 .topnav a:hover {
   background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
+/* ---					Styles for the navigation div 				--- E N D --- */
 
-.tableImage {
+
+/* ---     styles for the products table 		--- B E G I N --- */
+.productsTable .tableImage {
 	height:200px;
 	width:200px;
 	padding: 5px;
 	background-color: white;
 }
-.tableImage:hover {
+
+.productsTable .tableImage:hover {
 	background-color:#ddd;
 }
 
-.chosenProductDetailsImage{
+
+.productsTable .priceAb {
+	font-size: 16px;
+	font-family: Arial, Helvetica;
+}
+
+.productsTable .price {
+	font-weight: bold;
+}
+/* ---     styles for the products table    --- END --- */
+
+.chosenProductDetailsImage{  /** style for the product's detailed image */
 	height:550px;
 	width:400px;
 	padding: 10px;
 	background-color: white;
 }
 
+
+/* styles for the contacts table --- B E G I N --- */
 table.contactTable {
  	font-family:"Segoe UI",Arial,sans-serif;
  	margin-top:10px;
@@ -73,25 +92,17 @@ table.contactTable {
 }
 
 
-.tdrigth 
+.contactTable .tdrigth 
 {
   table-layout:fixed;
   width:120px;
 }
 
-textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
+.contactTable textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
     width:100%;
     max-width:98%;
     max-height:30%;
 }
 
 
-
-.priceAb {
-	font-size: 16px;
-	font-family: Arial, Helvetica;
-}
-
-.price {
-	font-weight: bold;
-}
+/* styles for the contacts table --- E N D --- */
