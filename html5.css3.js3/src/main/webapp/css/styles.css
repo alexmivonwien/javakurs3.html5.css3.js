@@ -30,35 +30,41 @@ h1,h2,h3,h4,h5,h6{
 
 /* ---------------------- Styles for the navigation ---------------------------------------------------------------------------------------- */
 
-.topnav { /** center a div, how it works @see  https://stackoverflow.com/a/31639985/1925356 **/
- /**		
-  left: 50%;	
-   the left property (when given in %) is calculated based on height of the outer div (in our case, window). 
-  transform: translate3d(-50%,-50%, 0);  transform uses height/width of the element to determine translation, so the  div will move left(50% width
-  											since height /width are given in negatives, thus aligning the div to the center of the page.
-  position: absolute;
-  **/
-  
-  	margin-left: auto;
+.dropdownmenu { 
+	margin-left: auto;
 	margin-right: auto;
 }
 
-.topnav nav { /** we are aligning the text within the nav, not the nav itself!**/
-	text-align: center;
+.dropdownmenu:hover { 
+	padding-bottom: 5em; /* moves the content following the dropdownmenu 5em down */
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.topnav a {
-  font-family:"Segoe UI",Arial,sans-serif;
-  color: #000;
-  text-align: center;
-  padding: 14px;			/** used to generate space around an element's content **/
-  text-decoration: none;	/** removes the underline in the link's content **/
+.dropdownmenu ul {
+	padding: 0; /* margin vs. padding, @see https://stackoverflow.com/questions/2189452/when-to-use-margin-vs-padding-in-css */
+	text-align: center;	/* change this to right, left and center and right to move the whole menu right, left and center */
 }
 
+.dropdownmenu ul li {
+	position: relative; /* position:relative is needed when we want the dropdown content to be placed right below the <li> item (using position:absolute). */
+	display: inline-block;
+    width: 200px;
+    line-height: 30px;
+	font-size: 16px;
+	font-family:"Segoe UI",Arial,sans-serif;
+}
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
+.dropdownmenu ul li ul {
+	position: absolute;	/* position:absolute is needed when we want the dropdown content to be placed right below the parent  <li> item (which is positioned using position:relative). */
+	top: 100%;
+    left: 50%;
+    margin-left: -101px; /** for negative margins, see http://stackoverflow.com/questions/11495200/how-do-negative-margins-in-css-work-and-why-is-margin-top-5-margin-bottom5 **/
+    display: none;
+}
+
+.dropdownmenu ul li:hover ul {
+	display: block;
 }
 
 
