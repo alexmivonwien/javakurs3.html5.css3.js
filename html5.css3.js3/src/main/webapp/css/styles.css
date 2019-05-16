@@ -30,15 +30,14 @@ h1,h2,h3,h4,h5,h6{
 
 /* ---------------------- Styles for the navigation of the index.html page ---------------------------------------------------------------------------------------- */
 
-/* @sieh https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button */
 
-.dropdownContainer{
-  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
+/* .dropdownContainer{ ---> uncomment this to center the menu
+  left: 50%;	* 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). *
   
-  transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
-  											since height /width are given in negatives, thus aligning the div to the center of the page. **/
+  transform: translate3d(-50%,-50%, 0); * transform uses height/width of the element to determine translation, so the  div will move left(50% width
+  											since height /width are given in negatives, thus aligning the div to the center of the page. *
   position: absolute;
-}
+} */
 
 .dropdownEntry {
   padding: 16px;
@@ -86,14 +85,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* ---------------------- Styles for the navigation of the contact.html page ---------------------------------------------------------------------------------------- */
-
+/* a similar approach is applied on the  https://www.limango-outlet.de/  */
 .dropdownmenu { 
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.dropdownmenu:hover { 
-	padding-bottom: 5em; /* moves the content following the dropdownmenu 5em down */
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -110,6 +103,17 @@ h1,h2,h3,h4,h5,h6{
     line-height: 30px;
 	font-size: 16px;
 	font-family:"Segoe UI",Arial,sans-serif;
+	background-color: rgba(194,194,194,.5);
+}
+
+.dropdownmenu ul li a {
+	text-decoration: none;
+	color:black;
+}
+
+.dropdownmenu ul li a:hover {
+  background-color: #f9f9f9;
+  z-index: 1;
 }
 
 .dropdownmenu ul li ul {
