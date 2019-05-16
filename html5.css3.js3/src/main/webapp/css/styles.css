@@ -28,7 +28,56 @@ h1,h2,h3,h4,h5,h6{
 	width:15%;
 }
 
-/* ---------------------- Styles for the navigation ---------------------------------------------------------------------------------------- */
+/* ---------------------- Styles for the navigation of the index.html page ---------------------------------------------------------------------------------------- */
+
+/* @sieh https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button */
+
+.dropdownEntry {
+  padding: 16px;
+  font-family:"Segoe UI",Arial,sans-serif;
+  font-size:16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 510px;
+  min-height: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-family:"Segoe UI",Arial,sans-serif;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdownEntry {
+  background-color: #f9f9f9;
+}
+
+/* ---------------------- Styles for the navigation of the contact.html page ---------------------------------------------------------------------------------------- */
 
 .dropdownmenu { 
 	margin-left: auto;
@@ -66,6 +115,8 @@ h1,h2,h3,h4,h5,h6{
 .dropdownmenu ul li:hover ul {
 	display: block;
 }
+
+
 
 
 /** --------- styles for the productsTable --------------------------------------------------------------------------------------------------- **/
