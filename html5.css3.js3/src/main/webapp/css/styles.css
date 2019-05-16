@@ -32,6 +32,14 @@ h1,h2,h3,h4,h5,h6{
 
 /* @sieh https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button */
 
+.dropdownContainer{
+  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
+  
+  transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
+  											since height /width are given in negatives, thus aligning the div to the center of the page. **/
+  position: absolute;
+}
+
 .dropdownEntry {
   padding: 16px;
   font-family:"Segoe UI",Arial,sans-serif;
@@ -51,7 +59,7 @@ h1,h2,h3,h4,h5,h6{
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 510px;
+  min-width: 410px;
   min-height: 110px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
