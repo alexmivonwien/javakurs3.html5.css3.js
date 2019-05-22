@@ -128,8 +128,18 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 }
 
+/* styles for the picture list ul on the contact.html table */
 
+/* @see https://stackoverflow.com/questions/18378800/how-to-keep-li-elements-on-single-line-in-fixed-width-ul */
+ul.picListUl {
+	width: 140px;
+    display: table;
+    table-layout: fixed;
+}
 
+ul.picListUl li {
+    display: table-cell;
+}
 
 /** --------- styles for the productsTable --------------------------------------------------------------------------------------------------- **/
 

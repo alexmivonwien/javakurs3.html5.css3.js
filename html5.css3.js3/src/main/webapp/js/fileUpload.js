@@ -41,13 +41,13 @@ function dateiauswahl(evt) {
 }
 
 function addArrayElement(output, f) {
+	var lastModified = ( f.lastModifiedDate) ?  f.lastModifiedDate.toLocaleDateString() : ""; // Mozille bug
 	output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a',
-			') - ', f.size, ' bytes, last modified: ', f.lastModifiedDate
-					.toLocaleDateString(), '</li>');
+			') - ', f.size, ' bytes, last modified: ', lastModified, '</li>');
 }
 
 function printFileDetails(output) {
-	document.getElementById('list').innerHTML = '<ul>' + output.join('')
+	document.getElementById('list').innerHTML = '<ul class = \' picListUl\'>' + output.join('')
 			+ '</ul>';
 }
 
