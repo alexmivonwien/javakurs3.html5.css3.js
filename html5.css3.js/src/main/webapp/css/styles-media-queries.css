@@ -1,6 +1,5 @@
 header {
   background-color: #F1F1F1;
-  padding: 25px;					/** used to generate space around an element's content **/
 }
 
 h1{font-size:36px; text-align: center;}
@@ -22,18 +21,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-/* ---					Styles for the navigation div 				--- B E G I N --- */
-.topnav {  /** center a div, how it works source:
- 			https://stackoverflow.com/a/31639985/1925356 **/
- 		
-  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
-  
-  transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
-  											since height /width are given in negatives, thus aligning the div to the center of the page. **/
-  position: absolute;
-}
-
-
 .topnav a {
   font-family:"Segoe UI",Arial,sans-serif;
   color: #000;
@@ -43,11 +30,38 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
+@media screen and (min-width: 640px) { /* media queries: https://www.w3schools.com/css/css3_mediaqueries.asp */
+
+	header {
+	  padding: 25px;					/** used to generate space around an element's content **/
+	}
+
+	.topnav {	 	
+	 	/** center a div, how it works source:
+	 		https://stackoverflow.com/a/31639985/1925356 **/
+	 		
+	  left: 50%;	/** 		the left property (when given in %) is calculated based on height of the outer div (in our case, window). **/
+	  
+	  transform: translate3d(-50%,-50%, 0); /** transform uses height/width of the element to determine translation, so the  div will move left(50% width
+	  											since height /width are given in negatives, thus aligning the div to the center of the page. **/
+	  position: absolute;
+	}
+}
+
+@media screen and (max-width: 640px) {  /* media queries: https://www.w3schools.com/css/css3_mediaqueries.asp */
+
+	.topnav a {
+	  display:block;
+	  padding: 5px;			/** used to generate space around an element's content **/
+	}
+	
+}
+
+
 /* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
 }
-/* ---					Styles for the navigation div 				--- E N D --- */
 
 
 /* ---     styles for the products table 		--- B E G I N --- */
