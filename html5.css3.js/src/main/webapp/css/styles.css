@@ -1,3 +1,8 @@
+
+html {
+	font-family:"Segoe UI",Arial,sans-serif;
+}
+
 header {
   background-color: #F1F1F1;
   padding: 25px;					/** used to generate space around an element's content **/
@@ -35,7 +40,6 @@ h1,h2,h3,h4,h5,h6{
 
 
 .topnav a {
-  font-family:"Segoe UI",Arial,sans-serif;
   color: #000;
   text-align: center;
   padding: 14px;			/** used to generate space around an element's content **/
@@ -83,7 +87,6 @@ h1,h2,h3,h4,h5,h6{
 
 /* styles for the contacts table --- B E G I N --- */
 table.contactTable {
- 	font-family:"Segoe UI",Arial,sans-serif;
  	margin-top:10px;
  	margin-left:190px;
 }
