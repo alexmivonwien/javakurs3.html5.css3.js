@@ -74,6 +74,23 @@ h1,h2,h3,h4,h5,h6{
    display :block;
 }
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
 /* ---					Styles for the navigation div 				--- E N D --- */
 
 /* ---     styles for the products table    --- END --- */
