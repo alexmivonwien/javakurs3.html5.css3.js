@@ -1,0 +1,132 @@
+
+/* Responsive design and media queries, 
+	@see https://www.w3schools.com/css/css_rwd_grid.asp
+	@see https://www.w3schools.com/css/css_rwd_mediaqueries.asp 
+	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+	@see https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_img_gallery
+	
+*/
+
+html {
+	font-family:"Segoe UI",Arial,sans-serif;
+}
+
+header {
+  background-color: #F1F1F1;
+  padding: 25px;					/** used to generate space around an element's content **/
+}
+
+h1{font-size:36px; text-align: center;}
+h2{font-size:30px; text-align: center;}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
+}
+
+
+* { /* 	 @see https://www.w3schools.com/css/css_rwd_grid.asp */
+  box-sizing: border-box; /*  makes sure that the padding and the border are included in the total width and height of the elements. */
+}
+/* @see https://www.mediaevent.de/css/display-flex.html */
+.row {
+  display: flex; 
+  flex-wrap: wrap; /*@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex items will wrap onto multiple lines, from top to bottom. */
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%; /* @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. */
+  max-width: 25%;
+}
+
+.column .productImage {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+
+/* Responsive layout - on desktops only enable hover */
+@media screen and (min-width: 800px) {
+	.column .productImage:hover{
+		background-color:#ddd; 
+	}
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.productImage  > *{
+   display :block;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+/* ---					Styles for the navigation div 				--- E N D --- */
+
+/* ---     styles for the products table    --- END --- */
+
+.chosenProductDetailsImage{  /** style for the product's detailed image */
+	height:550px;
+	width:400px;
+	padding: 10px;
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+/* styles for the contacts table --- B E G I N --- */
+table.contactTable {
+ 	margin-top:10px;
+ 	margin-left:190px;
+}
+
+
+.contactTable .tdrigth 
+{
+  table-layout:fixed;
+  width:120px;
+}
+
+.contactTable textarea {				/** limiting the textarea size, @see https://stackoverflow.com/questions/27939344/textarea-max-width **/
+    width:100%;
+    max-width:98%;
+    max-height:30%;
+}
+
+
+/* styles for the contacts table --- E N D --- */
