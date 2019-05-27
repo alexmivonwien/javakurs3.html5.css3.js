@@ -1,9 +1,11 @@
 
-/* Responsive design and media queries, 
-	@see https://www.w3schools.com/css/css_rwd_grid.asp
-	@see https://www.w3schools.com/css/css_rwd_mediaqueries.asp 
+/* Responsive design and media queries: grid
+	grid is preferred to flexbox when it comes to complex layouts
+	@see https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints	
+	@see https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s
 	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
-	@see https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_img_gallery
+	@see https://www.w3schools.com/css/css_rwd_grid.asp
+	
 	
 */
 
@@ -27,47 +29,53 @@ h1,h2,h3,h4,h5,h6{
 * { /* 	 @see https://www.w3schools.com/css/css_rwd_grid.asp */
   box-sizing: border-box; /*  makes sure that the padding and the border are included in the total width and height of the elements. */
 }
-/* @see https://www.mediaevent.de/css/display-flex.html */
-.row {
-  display: flex; 
-  flex-wrap: wrap; /*@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex items will wrap onto multiple lines, from top to bottom. */
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%; /* @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. */
-  max-width: 25%;
+/* For mobile phones: Always Design for Mobile First!*/
+[class*="col-"] {
+  width: 100%;
 }
 
-.column .productImage {
-  margin-top: 8px;
-  vertical-align: middle;
+@media only screen and (min-width: 600px) {   /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
 }
 
-
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+} 
 
 /* Responsive layout - on desktops only enable hover */
 @media screen and (min-width: 800px) {
-	.column .productImage:hover{
+	.productImage:hover{
 		background-color:#ddd; 
 	}
-}
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
 }
 
 .productImage  > *{
@@ -88,10 +96,6 @@ h1,h2,h3,h4,h5,h6{
   text-align: center;
 }
 
-
-
-
-/* ---					Styles for the navigation div 				--- E N D --- */
 
 /* ---     styles for the products table    --- END --- */
 
