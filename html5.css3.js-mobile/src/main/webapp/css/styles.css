@@ -1,9 +1,10 @@
 
-/* Responsive design and media queries, 
-	@see https://www.w3schools.com/css/css_rwd_grid.asp
-	@see https://www.w3schools.com/css/css_rwd_mediaqueries.asp 
-	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+/* Responsive design and media queries, flexbox template:
+	Flexbox is preferred for simpler templates, whereas grid - for complex ones
 	@see https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_img_gallery
+	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+	@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+	
 	
 */
 
