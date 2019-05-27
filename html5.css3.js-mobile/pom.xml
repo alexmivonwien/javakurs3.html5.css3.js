@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>javakurs3</groupId>
-  <artifactId>html5.css3.js-mobile</artifactId>
+  <artifactId>html5.css3.js-mobile2</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>html5.css3.js-mobile Maven Webapp</name>
+  <name>html5.css3.js2-mobile Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>os</finalName>
+    <finalName>html5.css3.js-mobile2</finalName>
   </build>
 </project>
