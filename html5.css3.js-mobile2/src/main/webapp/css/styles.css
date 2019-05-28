@@ -1,15 +1,11 @@
 
-/* The online shop with a grid layout. The grid is preferred to flexbox when it comes to complex layouts, details below:
-	
-	1.) A Complete Guide to Grid:
-	https://css-tricks.com/snippets/css/complete-guide-grid/
+/* The online shop with a responsive Grid-View. We are using  *{ box-sizing: border-box; } though; @see
 
-	2.) Responsive design and media queries: grid
+	1.) Responsive design and media queries: grid
 	
 	@see https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints	
 	@see https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s
 	@see https://www.w3schools.com/css/css_rwd_grid.asp
-	
 	
 */
 
