@@ -103,6 +103,10 @@ h1,h2,h3,h4,h5,h6{
  .productImage{
  	float:left;
  }
+ 
+ #leftDiv {
+ 	display:none;
+ }
 
 @media only screen and (min-width: 600px) {   /* For tablets: */
   .col-s-1 {width: 8.33%;}
@@ -117,6 +121,10 @@ h1,h2,h3,h4,h5,h6{
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
+  
+   #leftDiv {
+ 	display:block;
+   }
   
 }
 
@@ -139,6 +147,10 @@ h1,h2,h3,h4,h5,h6{
 		width:250px;
 		padding: 5px;
 	}
+	
+	#leftDiv {
+ 		display:block;
+   	}
 	
 	.productImage:hover{
 		background-color:#ddd; 
@@ -171,18 +183,6 @@ h1,h2,h3,h4,h5,h6{
 
 
 /* ---     styles for the products table    --- END --- */
-
-.chosenProductDetailsImage{  /** style for the product's detailed image */
-	height:550px;
-	width:400px;
-	padding: 10px;
-	background-color: white;
-}
-
-
-
-
-
 
 
 
