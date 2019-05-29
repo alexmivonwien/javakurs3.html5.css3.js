@@ -182,6 +182,12 @@ h1,h2,h3,h4,h5,h6{
   text-align: center;
 }
 
+.chosenProductDetailsImage{  /** style for the product's detailed image */
+	height:550px;
+	width:100%; /* @see https://stackoverflow.com/a/56353635/1925356 */
+	padding: 10px;
+	background-color: white;
+}
 
 /* ---     styles for the products table    --- END --- */
 
