@@ -37,17 +37,17 @@ function showDetailImage(elem){
 	// https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript:
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-	if (w < 600){
+	if (w < 600){ //do not execute function on devices where window width < 600
 		return;
 	}
 	
 	var productDetailsImage = document.getElementById("chosenProductDetailsImageId");
 	if (productDetailsImage!=null){
-		productDetailsImage.src = elem.src;
+		productDetailsImage.src = elem.firstElementChild.src;
 	}
 	var beachWearDetailsImage = document.getElementById("chosenBeachWearDetailsImageId");
 	if (beachWearDetailsImage!=null){
-		beachWearDetailsImage.src = elem.src;
+		beachWearDetailsImage.src = elem.firstElementChild.src;
 	}
 }
 
@@ -64,6 +64,61 @@ function hideDetailImage(){
 	if (beachWearDetailsImage!=null){
 		beachWearDetailsImage.src = "";
 	}
-
-	
 }
+
+
+/**
+ * @param elem
+ * @returns
+ */
+function setAddedToCart(elem) {
+	if (elem.checked) {
+		elem.nextElementSibling.innerHTML = "Added to cart!"; // the first sibling of the checkbox is the <span> element
+		elem.nextElementSibling.classList.add("addedToCart"); // add a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+	} else {
+		elem.nextElementSibling.innerHTML = "Add to cart"; // the first sibling of the checkbox is the <span> element
+		elem.nextElementSibling.classList.remove("addedToCart"); // remove a css class to an element, @see https://stackoverflow.com/a/16283612/1925356
+	}
+
+	addOrRemoveCartItem(elem);
+}
+
+/**
+ * @returns
+ */
+function addOrRemoveCartItem(elementToAddOrRemove) {
+
+	var cartTable = document.getElementById("cartTableId");
+	var rowNo = cartTable.rows.length;
+
+	if (elementToAddOrRemove.checked) {
+		var cartTableRow1 = document.createElement("tr");
+		cartTableRow1.id = "cartTableId_" + elementToAddOrRemove.id;
+		cartTable.appendChild(cartTableRow1);
+
+		var cartTableTD0 = document.createElement("td");
+		cartTableTD0.innerHTML = (rowNo + 1);
+		cartTableRow1.appendChild(cartTableTD0);
+
+		var productName = document.createTextNode(elementToAddOrRemove.value);
+		var cartTableTD1 = document.createElement("td");
+		cartTableTD1.appendChild(productName);
+		cartTableRow1.appendChild(cartTableTD1);
+
+		var cartTableTD2 = document.createElement("td");
+		var priceValue = elementToAddOrRemove.nextElementSibling.nextElementSibling.firstElementChild.innerHTML;
+
+		var priceNode = document.createTextNode(priceValue);
+		cartTableTD2.appendChild(priceNode);
+		cartTableRow1.appendChild(cartTableTD2);
+
+	} else {
+		var rowToRemove = document.getElementById("cartTableId_" + elementToAddOrRemove.id);
+		var rowToRemoveIndex = parseInt(rowToRemove.firstElementChild.innerHTML, 10);
+		cartTable.deleteRow(rowToRemoveIndex - 1);
+		var i;
+		for (i = 0; i < cartTable.rows.length; i++) {
+			cartTable.rows[i].firstElementChild.innerHTML = (i + 1);
+		}
+	}
+};
