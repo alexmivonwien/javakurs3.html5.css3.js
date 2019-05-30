@@ -51,6 +51,7 @@ h1,h2,h3,h4,h5,h6{
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 15px;
 }
 
 .dropdown-content {
@@ -71,19 +72,11 @@ h1,h2,h3,h4,h5,h6{
   display: block;
 }
 
-.dropdown-content a:hover {
-	background-color: #f1f1f1
+
+.dropdownContainer  > *{
+   display :block;
 }
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropdownEntry {
-  background-color: #f9f9f9;
-}
-
-
+ 
 
 * { /* 	 @see https://www.w3schools.com/css/css_rwd_grid.asp */
   box-sizing: border-box; /*  makes sure that the padding and the border are included in the total width and height of the elements. */
@@ -124,8 +117,24 @@ h1,h2,h3,h4,h5,h6{
   .col-s-12 {width: 100%;}
   
    #leftDiv {
- 	display:block;
+ 		display:block;
    }
+   
+   .dropdownContainer  > *{
+   		display:inline-block;
+	}
+   
+   .dropdown-content a:hover {
+ 	 	background-color: #f1f1f1
+	}
+
+	.dropdown:hover .dropdown-content {
+  		display: block;
+	}
+
+	.dropdown:hover .dropdownEntry {
+  		background-color: #f9f9f9;
+	}
   
 }
 
@@ -155,6 +164,22 @@ h1,h2,h3,h4,h5,h6{
 	
 	.productImage:hover{
 		background-color:#ddd; 
+	}
+	   
+	.dropdownContainer  > *{
+   		display:inline-block;
+	}
+	
+	.dropdown-content a:hover {
+ 	 	background-color: #f1f1f1
+	}
+
+	.dropdown:hover .dropdown-content {
+  		display: block;
+	}
+
+	.dropdown:hover .dropdownEntry {
+  		background-color: #f9f9f9;
 	}
 } 
 

@@ -1,3 +1,52 @@
+
+/** enables drop-down for mobile devices only:
+ * 
+ * @returns
+ */
+function enableDropDownForMobile(elem){
+	
+	// https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript:
+	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+	if (w > 600){ //do not execute function on devices where window width < 600
+		return;
+	}
+//	 var i;	
+//	 
+//	 var mainMenus = document.querySelectorAll(".dropdown .dropdownEntry"); 
+//	 for (i = 0; i <mainMenus.length; i++){
+//		 mainMenus[i].style = "background-color: #f9f9f9;"
+//	 }
+//	
+//	 var submenuContainers = document.querySelectorAll(".dropdown .dropdown-content"); 
+//	 for (i = 0; i <submenuContainers.length; i++){
+//		 submenuContainers[i].style = "#f9f9f9;";
+//	 }
+//
+//	 var submenus = document.querySelectorAll(".dropdown-content a"); 
+//	 for (i = 0; i <submenus.length; i++){
+//		 submenus[i].style = "background-color: #f1f1f1; text-decoration: none;";
+//	 }
+	
+	
+	 var dropDownContentDisplay = elem.nextElementSibling.style.display;
+	 
+	 if (dropDownContentDisplay == "none" || dropDownContentDisplay == ""){
+		 elem.style.background = "#f9f9f9"; // this is the dropdownEntry .element
+		 elem.nextElementSibling.style.display="block";
+//		 for (i = 0; i <elem.nextElementSibling.children.length; i++){ // @see https://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript
+//			 elem.nextElementSibling.children[i].style.background = "#f1f1f1";
+//		 }
+	 } else  if (dropDownContentDisplay == "block"){
+		 elem.style.background = "#f1f1f1";
+		 elem.nextElementSibling.style.display="none";
+		 
+	 }
+	
+	
+}
+
+
 /**
  * sets the default values on the contact.html page
  * 
