@@ -1,11 +1,10 @@
 
-/* Responsive design and media queries, flexbox template:
+/* The online shop with responsive design, media queries, and flexbox template:
 	Flexbox is preferred for simpler templates, whereas grid - for complex ones
 	@see https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_img_gallery
 	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
 	@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-	
-	
+	@see https://www.mediaevent.de/css/display-flex.html
 */
 
 html {
@@ -13,7 +12,7 @@ html {
 }
 
 header {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   padding: 25px;					/** used to generate space around an element's content **/
 }
 
@@ -21,34 +20,59 @@ h1{font-size:36px; text-align: center;}
 h2{font-size:30px; text-align: center;}
 
 h1,h2,h3,h4,h5,h6{
-	font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
+  font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
 }
 
 
 * { /* 	 @see https://www.w3schools.com/css/css_rwd_grid.asp */
   box-sizing: border-box; /*  makes sure that the padding and the border are included in the total width and height of the elements. */
 }
-/* @see https://www.mediaevent.de/css/display-flex.html */
-.row {
-  display: flex; 
+
+.row { /*the container for the column classes */
+  display: flex;  /* display:flex und display: grid sind in CSS3 dazugekommen. */
   flex-wrap: wrap; /*@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex items will wrap onto multiple lines, from top to bottom. */
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create six equal columns that sit next to each other */
 .column {
-  flex: 25%; /* @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. */
-  max-width: 25%;
+  flex: 16%; /* @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/  This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. */
+  max-width: 16%;
 }
 
-.column .productImage {
-  margin-top: 8px;
-  vertical-align: middle;
+.productImage  > *{ /* all chidren of the class productImage */
+   display :block;
+}
+
+.chosenProductDetailsImage{  /** style for the product's detailed image */
+	height:550px;
+	width:100%;
+	padding: 10px;
+	background-color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
+.aside {   	/* ---     styles for the products chosen summary "table"  */
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
 /* Responsive layout - on desktops only enable hover */
 @media screen and (min-width: 800px) {
+	
+	.tableImage{	/* ---     styles for the products "table"  */
+		height:250px;
+		width:250px;
+		padding: 5px;
+	}
 	.column .productImage:hover{
 		background-color:#ddd; 
 	}
@@ -58,8 +82,8 @@ h1,h2,h3,h4,h5,h6{
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
-    max-width: 50%;
+    flex: 25%;
+    max-width: 25%;
   }
 }
 
@@ -71,16 +95,6 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-.productImage  > *{
-   display :block;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* Style the footer */
 .footer {
@@ -91,23 +105,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-
 /* ---					Styles for the navigation div 				--- E N D --- */
-
-/* ---     styles for the products table    --- END --- */
-
-.chosenProductDetailsImage{  /** style for the product's detailed image */
-	height:550px;
-	width:400px;
-	padding: 10px;
-	background-color: white;
-}
-
-
-
-
-
-
 
 
 /* styles for the contacts table --- B E G I N --- */
