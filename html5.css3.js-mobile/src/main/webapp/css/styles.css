@@ -1,5 +1,5 @@
 
-/* The online shop with responsive design, media queries, and flexbox template:
+/* The online shop with responsive design, media queries, and flexbox layout:
 	Flexbox is preferred for simpler templates, whereas grid - for complex ones
 	@see https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_img_gallery
 	@see https://www.w3schools.com/css/css3_mediaqueries_ex.asp
@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .row { /*the container for the column classes */
-  display: flex;  /* display:flex und display: grid sind in CSS3 dazugekommen. */
+  display: flex;  /* display:flex und display: grid sind in CSS3 dazugekommen; display-flex: enables a flex context for all its direct children */
   flex-wrap: wrap; /*@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex items will wrap onto multiple lines, from top to bottom. */
 }
 
@@ -82,8 +82,8 @@ h1,h2,h3,h4,h5,h6{
 @media screen and (min-width: 800px) {
 	
 	.tableImage{	/* ---     styles for the products "table"  */
-		height:200px;
-		width:200px;
+		height:230px;
+		width:230px;
 		padding: 5px;
 	}
 	.column .productImage:hover{
