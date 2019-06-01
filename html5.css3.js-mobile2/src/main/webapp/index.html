@@ -2,12 +2,21 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- https://www.w3schools.com/css/css_rwd_viewport.asp  -->
+		<!-- You can use open graph tags to customize link previews.
+	    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+	    <meta property="og:url"           content="https://localhost:8080" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="Online shop" />
+	    <meta property="og:description"   content="Online dress shop" />
+	    <meta property="og:image"         content="https://localhost:8080/images/NA823E08M-H11@6.jpg" />
 		<link rel="stylesheet" href="css/styles.css">
-		<script src="js/onlineshop.js"></script> 
+		<script src="js/onlineshop.js"></script>
+		<script src="js/facebook.js"></script> 
 		<title>On-line shop</title>
 	</head>
 	<!-- Header -->
 	<header>
+  		<div id="fb-root"></div>
 		<h1>Welcome to our online dress shop!</h1>
 		<div class="dropdownContainer">
 			<div class="dropdown">
@@ -98,7 +107,14 @@
 		      	<table id="cartTableId">
 		   		</table>
 		    </div>
- 			</div> <!--  class = "col-3 col-s-12" -->
+		    <!-- Your like button code -->
+			<div class="fb-like" 
+			    data-href="https://www.your-domain.com/your-page.html" 
+			    data-layout="standard" 
+			    data-action="like" 
+			    data-show-faces="true">
+			 </div>
+ 		</div> <!--  class = "col-2 col-s-12" -->
 	</div> <!--  class="row" -->
 	<div class="footer">
  		<p>@Alex Mi, 2019, Java Kurs III</p>
