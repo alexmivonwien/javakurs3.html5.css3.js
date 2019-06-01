@@ -2,13 +2,24 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- https://www.w3schools.com/css/css_rwd_viewport.asp  -->
+		<!-- You can use open graph tags to customize link previews.
+	    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+	    <meta property="og:url"           content="https://localhost:8080" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="Online shop" />
+	    <meta property="og:description"   content="Online dress shop" />
+	    <meta property="og:image"         content="https://localhost:8080/images/NA823E08M-H11@6.jpg" />
+		
 		<link rel="stylesheet" href="css/styles.css">
-		<script src="js/onlineshop.js"></script> 
+		<script src="js/onlineshop.js"></script>
+		<script src="js/facebook.js"></script> 
 		<title>On-line shop</title>
 	</head>
 	<body>
 		<!-- Header -->
 		<header>
+			<!-- Load Facebook SDK for JavaScript -->
+  			<div id="fb-root"></div>
 			<h1>Welcome to our online dress shop!</h1>
 		    <div class="topnav">
 		      <a href="#">Newest</a>
@@ -83,6 +94,13 @@
 		      	<table id="cartTableId">
 		   		</table>
 		    </div>
+		    <!-- Your like button code -->
+		    <div class="fb-like" 
+			    data-href="https://localhost:8080/index.html" 
+			    data-layout="standard" 
+			    data-action="like" 
+			    data-show-faces="true">
+		  	</div>
 		</div>
 		</div>
 		<div class="footer">
