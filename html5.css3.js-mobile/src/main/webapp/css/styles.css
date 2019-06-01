@@ -23,6 +23,19 @@ h1,h2,h3,h4,h5,h6{
   font-weight:400;				/** sets how thick or thin characters in text should be displayed. **/
 }
 
+.topnav a {
+  color: #000;
+  text-align: center;
+  padding: 14px;			/** used to generate space around an element's content **/
+  text-decoration: none;	/** removes the underline in the link's content **/
+}
+
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;	/** change the background color on mouse over: the whole padding box content will be filled **/
+}
+
 
 * { /* 	 @see https://www.w3schools.com/css/css_rwd_grid.asp */
   box-sizing: border-box; /*  makes sure that the padding and the border are included in the total width and height of the elements. */
@@ -69,8 +82,8 @@ h1,h2,h3,h4,h5,h6{
 @media screen and (min-width: 800px) {
 	
 	.tableImage{	/* ---     styles for the products "table"  */
-		height:250px;
-		width:250px;
+		height:200px;
+		width:200px;
 		padding: 5px;
 	}
 	.column .productImage:hover{
