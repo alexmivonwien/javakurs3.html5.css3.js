@@ -63,6 +63,12 @@ h1,h2,h3,h4,h5,h6{
 	background-color: white;
 }
 
+.tableImage{	/* ---     styles for the products "table"  */
+	height:230px;
+	width:230px;
+	padding: 5px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -70,6 +76,9 @@ h1,h2,h3,h4,h5,h6{
   clear: both;
 }
 
+.productImage:hover{
+	background-color:#ddd; 
+}
 
 .aside {   	/* ---     styles for the products chosen summary "table"  */
   background-color: #f1f1f1;
@@ -79,32 +88,47 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* Responsive layout - on desktops only enable hover */
-@media screen and (min-width: 800px) {
-	
-	.tableImage{	/* ---     styles for the products "table"  */
-		height:230px;
-		width:230px;
-		padding: 5px;
-	}
-	.column .productImage:hover{
-		background-color:#ddd; 
-	}
+@media screen and (max-width: 1200px) {
+	 .column {
+	   	flex: 20%;
+	    max-width: 20%;
+	 }
+}
+
+
+/* Responsive layout - on desktops only enable hover */
+@media screen and (max-width: 900px) {
+	 .column {
+	   	flex: 25%;
+	    max-width: 25%;
+	 }
 }
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 25%;
-    max-width: 25%;
+    flex: 33%;
+    max-width: 33%;
   }
 }
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+  
+  .tableImage{	/* ---     styles for the products "table"  */
+	height:100%;
+	width:100%;
+	padding: 5px;
+   }
+  
+  .column.hideOnMobile{
+  	display:none;
   }
 }
 
@@ -122,7 +146,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 /* styles for the contacts table --- B E G I N --- */
-table.contactTable {
+table.contactTable {	
  	margin-top:10px;
  	margin-left:190px;
 }
